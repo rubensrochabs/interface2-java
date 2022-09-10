@@ -17,14 +17,14 @@ public class Program {
 
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:ss");
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
 
 		System.out.println("Enter rental data");
 		System.out.print("Car model: ");
 		String vehicleModel = sc.nextLine();
-		System.out.print("Pickup (dd/MM/yyyy hh:ss): ");
+		System.out.print("Pickup (dd/MM/yyyy hh:mm): ");
 		Date start = sdf.parse(sc.nextLine());
-		System.out.print("Return (dd/MM/yyyy hh:ss): ");
+		System.out.print("Return (dd/MM/yyyy hh:mm): ");
 		Date finish = sdf.parse(sc.nextLine());
 		
 		CarRental carRental = new CarRental(start, finish, new Vehicle(vehicleModel));
